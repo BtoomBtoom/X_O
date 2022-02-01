@@ -141,12 +141,6 @@ while play_again==1:
             print_board(board)
             play_again = play_again_()
             break
-        elif check_win_player_2(board,player_2_mark):
-            print('\n' * 10)
-            print("Player 2 win!!!!!!!!!")
-            print_board(board)
-            play_again = play_again_()
-            break
         elif check_tie(index):
             print('\n' * 10)
             print("Tieeeee!!!!!!!")
@@ -159,13 +153,7 @@ while play_again==1:
         print_board(board)
         in_put = input_check(index)
         update_board_player_2(in_put,board,player_2_mark)
-        if check_win_player_1(board,player_1_mark):
-            print('\n' * 10)
-            print("Player 1 win!!!!!!!!")
-            print_board(board)
-            play_again = play_again_()
-            break
-        elif check_win_player_2(board,player_2_mark):
+        if check_win_player_2(board,player_2_mark):
             print('\n' * 10)
             print("Player 2 win!!!!!!!!!")
             print_board(board)
